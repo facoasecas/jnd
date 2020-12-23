@@ -1,0 +1,93 @@
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+}
+
+a {
+    color: #666;
+}
+a:hover {
+    color: #000;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+h1 a {
+    color: #333;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    text-decoration: none;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.75;
+    color: #999;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.nav {
+    font-weight: 500;
+}
+
+.nav .nav-link {
+    border-bottom: 0.2rem solid transparent;
+}
+
+.nav .nav-link + .nav-link {
+    margin-left: 1rem;
+}
+
+.nav .active {
+    color: #000;
+    border-bottom-color: #000;
+}
+
+figure blockquote.blockquote {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-size: calc(1.5rem + 1vw);
+    line-height: 1.2;
+    display: inline;
+}
+
+figure figcaption.blockquote-footer {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 7vh;
+    color: #222;
+    display: inline;
+}
+
+figure figcaption.blockquote-footer:before {
+    content: "" !important;
+}
+
+figure figcaption.blockquote-footer abbr {
+    font-size: calc(0.88rem + 1vw);
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    margin-left: 0.4rem;
+    color: #222;
+}
+
+article {
+    min-height: 50vh;
+}
+
+p.lead{
+        font-size: calc(1rem + 0.5vw);
+        margin:0;
+        padding:0;
+}
