@@ -1,3 +1,9 @@
+:root{
+    --gris:#777;
+    --plata:#aaa;
+}
+
+
 body {
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 300;
@@ -13,18 +19,24 @@ body::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track {
 
 
 body::-webkit-scrollbar-thumb {
-    background-color: #ccc;
+    background-color: var(--plata);
 }
 
 a {
-    color: #666;
+    color: var(--gris);
+    text-decoration: none;
 }
 a:hover {
     color: #000;
+    text-decoration: underline;
+}
+
+:hover{
+    transition: .5s ease color;
 }
 
 h1 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.4rem;
 }
 
@@ -39,32 +51,59 @@ h1 a:hover {
 
 h2 {
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.75;
-    color: #999;
+    color: var(--plata);
 }
 
 h3 {
     font-weight: 500;
     font-size: 1rem;
+    color: var(--plata);
 }
+
+
+@media (max-width: 576px) {
+  h3 a:before{
+    content:"↑ ";
+  }
+}
+
 
 .nav {
-    font-weight: 500;
+    font-weight: 700;
 }
 
-.nav .nav-link {
-    border-bottom: 0.2rem solid transparent;
+.nav a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
 }
 
-.nav .nav-link + .nav-link {
-    margin-left: 1rem;
+a.pasive:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  transition: width 0.2s ease 0s, left 0.2s ease 0s;
+  width: 0;
 }
 
-.nav .active {
+a.pasive:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+a.active {
     color: #000;
-    border-bottom-color: #000;
 }
+
+
 
 figure blockquote.blockquote {
     font-family: "PT Serif", serif;
@@ -76,7 +115,7 @@ figure blockquote.blockquote {
 
 figure figcaption.blockquote-footer {
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: calc(1rem + 1vw);
     line-height: 7vh;
     color: #222;
     display: inline;
@@ -87,7 +126,6 @@ figure figcaption.blockquote-footer:before {
 }
 
 figure figcaption.blockquote-footer abbr {
-    font-size: calc(0.88rem + 1vw);
     font-family: "PT Serif", serif;
     font-weight: 700;
     letter-spacing: 0.1rem;
@@ -95,12 +133,40 @@ figure figcaption.blockquote-footer abbr {
     color: #222;
 }
 
-article {
-    min-height: 50vh;
-}
-
 p.lead{
         font-size: calc(1rem + 0.5vw);
         margin:0;
         padding:0;
+}
+
+
+article {
+    padding:1.5rem 0;
+    min-height: auto;
+}
+
+@media (min-width: 768px) {
+article { 
+    padding:1rem 0;
+    min-height: calc(50vh - 3rem);
+  }
+}
+
+abbr{
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+.initialism{
+  font-weight: 400;
+}
+
+.grilla{
+  background-image: url('img/bg.gif');
+  background-repeat: repeat-7;
+  background-size: 100% auto
+}
+
+#rotar{
+    transform: rotate(-90deg);
 }
