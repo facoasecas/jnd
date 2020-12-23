@@ -1,22 +1,22 @@
-:root{
-    --gris:#777;
-    --plata:#aaa;
+:root {
+    --gris: #777;
+    --plata: #aaa;
 }
-
 
 body {
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 300;
 }
 
-body::-webkit-scrollbar, textarea::-webkit-scrollbar {
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
     width: 0.25rem;
 }
 
-body::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
     background-color: #fafafa;
 }
-
 
 body::-webkit-scrollbar-thumb {
     background-color: var(--plata);
@@ -31,8 +31,8 @@ a:hover {
     text-decoration: underline;
 }
 
-:hover{
-    transition: .5s ease color;
+:hover {
+    transition: 0.5s ease color;
 }
 
 h1 {
@@ -62,48 +62,44 @@ h3 {
     color: var(--plata);
 }
 
-
 @media (max-width: 576px) {
-  h3 a:before{
-    content:"↑ ";
-  }
+    h3 a:before {
+        content: "↑ ";
+    }
 }
-
 
 .nav {
     font-weight: 700;
 }
 
 .nav a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 15px 20px;
-  position: relative;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    position: relative;
 }
 
-a.pasive:after {    
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 3px;
-  left: 50%;
-  position: absolute;
-  background: #000;
-  transition: width 0.2s ease 0s, left 0.2s ease 0s;
-  width: 0;
+a.pasive:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    background: #000;
+    transition: width 0.2s ease 0s, left 0.2s ease 0s;
+    width: 0;
 }
 
-a.pasive:hover:after { 
-  width: 100%; 
-  left: 0; 
+a.pasive:hover:after {
+    width: 100%;
+    left: 0;
 }
 
 a.active {
     color: #000;
 }
-
-
 
 figure blockquote.blockquote {
     font-family: "PT Serif", serif;
@@ -116,7 +112,6 @@ figure blockquote.blockquote {
 figure figcaption.blockquote-footer {
     font-weight: 500;
     font-size: calc(1rem + 1vw);
-    line-height: 7vh;
     color: #222;
     display: inline;
 }
@@ -128,45 +123,69 @@ figure figcaption.blockquote-footer:before {
 figure figcaption.blockquote-footer abbr {
     font-family: "PT Serif", serif;
     font-weight: 700;
-    letter-spacing: 0.1rem;
-    margin-left: 0.4rem;
+    letter-spacing: 0.075rem;
+    margin-left: 0.3rem;
     color: #222;
 }
 
-p.lead{
-        font-size: calc(1rem + 0.5vw);
-        margin:0;
-        padding:0;
+p.lead {
+    font-size: calc(1rem + 0.5vw);
+    margin: 0;
+    padding: 0;
 }
 
-
 article {
-    padding:1.5rem 0;
+    padding: 1.5rem 0;
     min-height: auto;
 }
 
 @media (min-width: 768px) {
-article { 
-    padding:1rem 0;
-    min-height: calc(50vh - 3rem);
-  }
+    article {
+        padding: 1rem 0;
+        min-height: calc(50vh - 3rem);
+    }
 }
 
-abbr{
-  border-bottom: none !important;
-  text-decoration: none !important;
+abbr {
+    border-bottom: none !important;
+    text-decoration: none !important;
 }
 
-.initialism{
-  font-weight: 400;
+.initialism {
+    font-weight: 400;
 }
 
-.grilla{
-  background-image: url('img/bg.gif');
-  background-repeat: repeat-7;
-  background-size: 100% auto
+.grilla {
+    background-image: url("img/bg.png");
+    background-repeat: repeat-y;
+    background-size: 100% auto;
 }
 
-#rotar{
-    transform: rotate(-90deg);
+/* SVG */
+
+svg text {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-size: 4px;
+    fill: #aaa;
+}
+
+@keyframes bajele {
+    from {
+        transform: translate(0, -1px);
+    }
+    to {
+        transform: translate(0, 2px);
+    }
+}
+
+svg g {
+    fill: none;
+    stroke: #aaa;
+    stroke-width: 0.3;
+    stroke-miterlimit: 10;
+    animation-name: bajele;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }

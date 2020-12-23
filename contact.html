@@ -8,10 +8,12 @@
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet" />
         <link href="style.css" rel="stylesheet" />
         <title>JND | WIP</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>        
     </head>
     <body>
-        <div class="container d-flex w-100 h-100 p-3 flex-column">
-            <header class="pb-5 text-center">
+        <div class="container d-flex w-100 flex-column">
+            <header class="py-5 text-center">
                 <h1 class="mt-3 float-md-start mb-0 align-items-center"><a href="index.html">José Neira</a></h1>
                 <nav class="mt-2 nav nav-masthead justify-content-center float-md-end">
                     <a class="nav-link pasive" href="index.html">Work</a>
@@ -34,18 +36,30 @@
                         </div>
                     </div>
                     <div class="col-sm-8">
-                        <img src="https://picsum.photos/id/1073/800/500" class="w-100 my-2" />
+                            <div id="mapa" style="width: 100%; height: 60vh;"></div>
                     </div>
                 </div>
             </main>
             <footer class="py-3">
-                <button type="button" class="btn btn-sm btn-light" id="grid">twelve column system</button>
+                <button type="button" class="btn btn-sm btn-light" id="grid">Bootstrap's grid system</button>
             </footer>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
+        <script>
+            var mymap = L.map("mapa").setView([-33.45, -70.666667], 10);
+            L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw", {
+                maxZoom: 20,
+                // si no les gusta dark-v10, prueben light-v10, outdoors-v11, satellite-v9 o satellite-streets-v11
+                id: "mapbox/light-v10",
+                tileSize: 512,
+                zoomOffset: -1,
+            }).addTo(mymap);
+        </script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
 
         <script>
             var open = false;
