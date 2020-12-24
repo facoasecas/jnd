@@ -137,7 +137,7 @@ article {
     min-height: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     article {
         padding: 1rem 0;
         min-height: calc(50vh - 3rem);
