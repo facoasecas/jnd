@@ -27,8 +27,17 @@
                         <h2 class="d-none d-md-block">About</h2>
                     </div>
                     <div class="col-md-8">
-                        <p class="lead pt-4 pt-md-0">In <span class="initialism">1984</span> José Neira received his <abbr title="Bachelor of Fine Arts" class="initialism">BFA</abbr> from <abbr title="The State University of New York" class="initialism">SUNY</abbr> College at Purchase, <abbr title="State of New York" class="initialism">NY</abbr>, where he was awarded The Dean’s Commendation for Excellence in Design. Following, he received his <abbr title="Master of Fine Arts" class="initialism">MFA</abbr> from the School of Art at Yale, where he had the privilege of learning directly from Paul Rand, Shigeo Fukuda, Armin Hofmann and other giants in the landscape of graphic design.</p>
-                        <p class="pt-3">José returned to Santiago, Chile, in <span class="initialism">1991</span>. Since then, he has been working in the arts and culture sector, as well as in the private sector, through brand, packaging, editorial, and signage design. Parallel to that, he has been involved in higher education, as an adjunct faculty member at Pontificia Universidad Católica de Chile, Universidad de Chile, Universidad Finis Terrae, and Universidad Andrés Bello. He was appointed Director of the latter’s Design School in <span class="initialism">2007</span>, a position he held until <span class="initialism">2009</span>.</p>
+                        <p class="lead pt-4 pt-md-0">
+                            In <span class="initialism">1984</span> José Neira received his <abbr title="Bachelor of Fine Arts" class="initialism">BFA</abbr> from
+                            <abbr title="The State University of New York" class="initialism">SUNY</abbr> College at Purchase, <abbr title="State of New York" class="initialism">NY</abbr>, where he was awarded The Dean’s Commendation for
+                            Excellence in Design. Following, he received his <abbr title="Master of Fine Arts" class="initialism">MFA</abbr> from the School of Art at Yale, where he had the privilege of learning directly from Paul Rand,
+                            Shigeo Fukuda, Armin Hofmann and other giants in the landscape of graphic design.
+                        </p>
+                        <p class="pt-3">
+                            José returned to Santiago, Chile, in <span class="initialism">1991</span>. Since then, he has been working in the arts and culture sector, as well as in the private sector, through brand, packaging, editorial,
+                            and signage design. Parallel to that, he has been involved in higher education, as an adjunct faculty member at Pontificia Universidad Católica de Chile, Universidad de Chile, Universidad Finis Terrae, and
+                            Universidad Andrés Bello. He was appointed Director of the latter’s Design School in <span class="initialism">2007</span>, a position he held until <span class="initialism">2009</span>.
+                        </p>
                     </div>
                     <div class="col-md-8 clearfix">
                         <img src="https://picsum.photos/id/201/800/500" class="w-100 my-4 shadow-sm" />
@@ -71,15 +80,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 
         <script>
-            // para ver la grilla
-            var open = false;
-            $("#grid").click(function () {
-                open = !open;
-                if (open) {
-                    $("main, header, footer").addClass("grilla");
-                } else {
-                    $("main, header, footer").removeClass("grilla");
-                }
+            $(function () {
+                // para ver la grilla
+                var open = false;
+                $("#grid").click(function () {
+                    open = !open;
+                    if (open) {
+                        $("main, header, footer").addClass("grilla");
+                    } else {
+                        $("main, header, footer").removeClass("grilla");
+                    }
+                });
             });
         </script>
     </body>

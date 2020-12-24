@@ -108,8 +108,8 @@ a.active {
 figure blockquote.blockquote {
     font-family: "PT Serif", serif;
     font-weight: 400;
-    font-size: calc(1.5rem + 1vw);
-    line-height: 1.2;
+    font-size: calc(1.4rem + 1vw);
+    line-height: 1.3;
     display: inline;
 }
 

@@ -41,13 +41,33 @@
                     </div>
                 </div>
             </main>
+
             <footer class="py-5">
                 <button type="button" class="btn btn-sm btn-light ms-1 shadow-sm" id="grid">Bootstrap's grid system</button>
             </footer>
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
         <script>
-            var mymap = L.map("mapa").setView([-33.4175,-70.606667], 14);
+            $(function () {
+                // para ver la grilla
+                var open = false;
+                $("#grid").click(function () {
+                    open = !open;
+                    if (open) {
+                        $("main, header, footer").addClass("grilla");
+                    } else {
+                        $("main, header, footer").removeClass("grilla");
+                    }
+                });
+            });
+        </script>
+
+        <script>
+            var mymap = L.map("mapa").setView([-33.4175, -70.606667], 14);
             L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw", {
                 maxZoom: 20,
                 // dark-v10, prueben light-v10, outdoors-v11, satellite-v9 o satellite-streets-v11
@@ -55,23 +75,6 @@
                 tileSize: 512,
                 zoomOffset: -1,
             }).addTo(mymap);
-        </script>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-
-        <script>
-            // para ver la grilla
-            var open = false;
-            $("#grid").click(function () {
-                open = !open;
-                if (open) {
-                    $("main, header, footer").addClass("grilla");
-                } else {
-                    $("main, header, footer").removeClass("grilla");
-                }
-            });
         </script>
     </body>
 </html>

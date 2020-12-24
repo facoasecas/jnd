@@ -30,7 +30,7 @@
                 <!--\/\/\/\/ TRABAJO DESTACADO /\/\/\/\/-->
                 <article class="row d-flex align-items-end">
                     <div class="col-sm-8">
-                        <img alt="pendiente" src="https://picsum.photos/id/345/800/450" class="w-100 my-2 shadow-sm" />
+                        <img loading="eager" alt="pendiente" src="https://picsum.photos/id/345/800/450" class="w-100 my-2 shadow-sm" />
                     </div>
                     <div class="col-sm-4">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" xml:space="preserve" class="mt-auto d-none d-sm-block">
@@ -42,7 +42,7 @@
                         </svg>
                     </div>
                     <div class="col-sm-8 order-sm-2">
-                        <img loading="lazy" alt="pendiente" src="https://picsum.photos/id/442/800/450" class="w-100 mt-3 mb-2 shadow-sm" />
+                        <img loading="eager" alt="pendiente" src="https://picsum.photos/id/442/800/450" class="w-100 mt-3 mb-2 shadow-sm" />
                     </div>
                     <div class="col-sm-4 col-md-3 col-lg-2 ms-auto order-sm-1">
                         <h3 class="align-middle py-2"><a href="single.html?titular=Beethoven’s%20250th%20Birthday%20at%20Ceac,%20University%20of%20Chile">Beethoven’s 250th Birthday at Ceac, University of Chile</a></h3>
@@ -64,7 +64,11 @@
                         <img loading="lazy" alt="pendiente" src="https://picsum.photos/id/1042/800/450" class="w-100 my-2 shadow-sm" />
                     </div>
                     <div class="col-sm-4 col-md-3 col-lg-2 order-sm-1 ms-auto">
-                        <h3 class="align-middle py-2"><a href="single.html?titular=Poster%20series%20for%20the%20National%20ymphony%20Orchestra%20of%20Chile,%20Symphonic%20and%20Chamber%20Choirs">Poster series for the National Symphony Orchestra of Chile, Symphonic and Chamber Choirs</a></h3>
+                        <h3 class="align-middle py-2">
+                            <a href="single.html?titular=Poster%20series%20for%20the%20National%20ymphony%20Orchestra%20of%20Chile,%20Symphonic%20and%20Chamber%20Choirs">
+                                Poster series for the National Symphony Orchestra of Chile, Symphonic and Chamber Choirs
+                            </a>
+                        </h3>
                     </div>
                 </article>
                 <article class="row my-3 d-flex align-items-center">
@@ -203,15 +207,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 
         <script>
-            // para ver la grilla
-            var open = false;
-            $("#grid").click(function () {
-                open = !open;
-                if (open) {
-                    $("main, header, footer").addClass("grilla");
-                } else {
-                    $("main, header, footer").removeClass("grilla");
-                }
+            $(function () {
+                // para ver la grilla
+                var open = false;
+                $("#grid").click(function () {
+                    open = !open;
+                    if (open) {
+                        $("main, header, footer").addClass("grilla");
+                    } else {
+                        $("main, header, footer").removeClass("grilla");
+                    }
+                });
             });
         </script>
     </body>
