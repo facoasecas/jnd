@@ -27,30 +27,41 @@
                         <h2 id="titular">Nombre del proyecto</h2>
                     </div>
                     <div class="col-md-8">
-                        <p class="lead pt-4 pt-md-0">Integer quis auctor nibh. Pellentesque accumsan pharetra augue quis mattis. Vivamus porttitor consectetur lorem in tincidunt. Sed volutpat est in ligula molestie, id convallis massa vestibulum. Nam laoreet
-                            consequat massa vitae dapibus. In ut mollis neque, et elementum lacus. Suspendisse magna nisl, condimentum quis tincidunt bibendum, tempus at nunc.</p>
+                        <p class="lead pt-4 pt-md-0" id="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit massa ut dictum malesuada. Sed vel nisl arcu. Duis eu ante accumsan, porttitor nisl quis, mattis est. Suspendisse et tellus semper, condimentum ante ac, laoreet mauris. In hac habitasse platea dictumst. Sed sit amet convallis arcu, eu sodales sapien. Fusce semper dolor arcu, vel interdum mauris feugiat non. Mauris ac felis non purus ultrices accumsan id quis ex. Vivamus eu neque et turpis hendrerit luctus vel nec magna morbi.</p>
                     </div>
                 </div>
                 <!--\/\/\/\/\/\/\/\/\/\/-->
                 <div class="row d-flex align-items-end">
-                    <div class="col-sm-12 pt-5">
+                    <div class="col-sm-12 pt-4 pt-md-5">
                         <img src="img/pic.png" class="w-100 shadow-sm" />
                     </div>
-                    <div class="col-sm-8 pt-5">
+                    <div class="col-sm-8 pt-4">
                         <img src="https://picsum.photos/800/450" class="w-100 shadow-sm" />
                     </div>
-                    <div class="col-6 col-sm-3 ms-auto pt-5">
+                    <div class="col-6 col-sm-3 ms-auto pt-4">
                         <img src="https://picsum.photos/450/450" class="w-100 shadow-sm" />
                     </div>
-                    <div class="col-6 col-sm-6 pt-5">
+                    <div class="col-6 col-sm-6 pt-4">
                         <img src="https://picsum.photos/800/800" class="w-100 shadow-sm" />
                     </div>
-                    <div class="col-sm-6 col-md-5 me-auto pt-5">
+                    <div class="col-sm-6 col-md-5 pt-4 ms-auto">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eleifend lacus. Fusce vulputate auctor ullamcorper. Mauris rhoncus, erat eget porta porttitor, purus orci posuere lacus, ut vulputate felis sem
                             at libero. Aliquam dignissim nulla libero.
                         </p>
                     </div>
+                    <div class="col-3 pt-4">
+                        <img src="https://picsum.photos/300/300" class="w-100 shadow-sm" />
+                    </div>                    
+                    <div class="col-3 pt-4">
+                        <img src="https://picsum.photos/400/400" class="w-100 shadow-sm" />
+                    </div> 
+                    <div class="col-3 pt-4">
+                        <img src="https://picsum.photos/500/500" class="w-100 shadow-sm" />
+                    </div> 
+                    <div class="col-3 pt-4">
+                        <img src="https://picsum.photos/600/600" class="w-100 shadow-sm" />
+                    </div> 
                 </div>
                 <!--\/\/\/\/\/\/\/\/\/\/-->
             </main>
@@ -71,6 +82,18 @@
             if (texto !== null) {
                 $("#titular").text(texto);
             }
+
+            // para descripción
+            let descriptor = [
+            "Vivamus bibendum lacus nec urna scelerisque, faucibus gravida odio convallis. Sed consectetur sollicitudin justo, eu porttitor magna mollis ut. Nam at eleifend libero. Morbi eget libero vitae nunc scelerisque imperdiet. Curabitur pulvinar sapien in pharetra euismod. Integer quis nulla mollis diam euismod varius. Pellentesque viverra elit sed metus faucibus, non porttitor velit suscipit. Phasellus eget leo eu augue efficitur consectetur leo.",
+            "Fusce sodales tempus sem a euismod. Nam pellentesque vestibulum massa, eu elementum orci maximus sit amet. Mauris vehicula at augue sit amet ultrices. Nullam volutpat convallis semper. Nunc in sollicitudin magna. Nam euismod orci mi, quis maximus justo interdum vel. Curabitur sollicitudin massa tellus, in feugiat diam luctus vitae. Donec ultrices sollicitudin mi nec finibus. Vestibulum a ex eu magna accumsan bibendum. Vivamus a nisi turpis.",
+            "Suspendisse dignissim elementum ligula. Sed non pulvinar nisi. Suspendisse posuere condimentum mauris vel scelerisque. Etiam dapibus, orci ut rhoncus porttitor, urna eros facilisis dui, interdum ultricies nunc justo ut tellus. Mauris in tortor eu arcu vulputate tincidunt. Cras libero elit, dapibus nec tortor ut, commodo convallis erat. Fusce id justo eu ante ornare pulvinar. Nunc in porttitor nunc, ut luctus ex. Etiam leo eros, pretium sit.",
+            "Sed commodo blandit nibh, vel malesuada nunc scelerisque eget. Sed dapibus porttitor efficitur. Suspendisse mollis diam enim, in accumsan dui accumsan ut. Sed dignissim porta augue a vestibulum. Curabitur facilisis tempus nibh a fermentum. Ut ac ex id elit varius vestibulum ut at nulla. Nunc cursus urna iaculis ligula posuere, non efficitur justo malesuada. Nulla eleifend justo ac augue luctus, in pharetra libero feugiat. Nullam commodo eu.",
+            "Nullam ac tortor ac ante consectetur rutrum ac nec elit. Morbi consectetur mollis dolor, id rhoncus odio vestibulum non. Sed varius ultrices ex eu sollicitudin. Sed convallis aliquam tellus, non interdum sem lobortis quis. Sed pulvinar sit amet urna quis tincidunt. Phasellus mollis nisi at lorem aliquam, sed consequat arcu venenatis. Phasellus nulla nunc, suscipit ut mollis et, scelerisque at justo. Sed sem orci, feugiat a fringilla et dui."
+            ];
+            let azar = Math.floor(Math.random() * 6) + 1;
+            $("#descripcion").text(descriptor[azar-1]);
+
             // para ver la grilla
             var open = false;
             $("#grid").click(function () {
