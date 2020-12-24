@@ -33,16 +33,16 @@
                 <!--\/\/\/\/\/\/\/\/\/\/-->
                 <div class="row d-flex align-items-end">
                     <div class="col-sm-12 pt-4 pt-md-5">
-                        <img src="img/pic.png" class="w-100 shadow-sm" />
+                        <img src="https://picsum.photos/1000/560" alt="16:9" class="w-100 shadow-sm" />
                     </div>
                     <div class="col-sm-8 pt-4">
-                        <img src="https://picsum.photos/800/450" class="w-100 shadow-sm" />
+                        <img src="https://picsum.photos/800/450" alt="random" class="w-100 shadow-sm" />
                     </div>
                     <div class="col-6 col-sm-3 ms-auto pt-4">
-                        <img src="https://picsum.photos/450/450" class="w-100 shadow-sm" />
+                        <img loading="lazy" src="https://picsum.photos/450/450" alt="random" class="w-100 shadow-sm" />
                     </div>
                     <div class="col-6 col-sm-6 pt-4">
-                        <img src="https://picsum.photos/800/800" class="w-100 shadow-sm" />
+                        <img loading="lazy" src="https://picsum.photos/800/800" alt="random" class="w-100 shadow-sm" />
                     </div>
                     <div class="col-sm-6 col-md-5 pt-4 ms-auto">
                         <p>
@@ -51,16 +51,16 @@
                         </p>
                     </div>
                     <div class="col-3 pt-4">
-                        <img src="https://picsum.photos/300/300" class="w-100 shadow-sm" />
+                        <img loading="lazy" src="https://picsum.photos/300/300" alt="random" class="w-100 shadow-sm" />
                     </div>                    
                     <div class="col-3 pt-4">
-                        <img src="https://picsum.photos/400/400" class="w-100 shadow-sm" />
+                        <img loading="lazy" src="https://picsum.photos/400/400" alt="random" class="w-100 shadow-sm" />
                     </div> 
                     <div class="col-3 pt-4">
-                        <img src="https://picsum.photos/500/500" class="w-100 shadow-sm" />
+                        <img loading="lazy" src="https://picsum.photos/500/500" alt="random" class="w-100 shadow-sm" />
                     </div> 
                     <div class="col-3 pt-4">
-                        <img src="https://picsum.photos/600/600" class="w-100 shadow-sm" />
+                        <img loading="lazy" src="https://picsum.photos/600/600" alt="random" class="w-100 shadow-sm" />
                     </div> 
                 </div>
                 <!--\/\/\/\/\/\/\/\/\/\/-->
@@ -92,6 +92,7 @@
             "Aenean placerat sapien in ipsum consectetur lacinia. Praesent venenatis eros non magna rutrum pretium. Nunc quis risus hendrerit, tristique urna non, pulvinar dolor. Etiam egestas lacus lorem, non aliquet lorem tincidunt nec. Proin elementum efficitur ex, sit amet tristique velit pellentesque sed. Aliquam blandit purus massa, sed ultricies dui fringilla et dolor."
             ];
             let azar = Math.floor(Math.random() * 6) + 1;
+            console.log(azar);
             $("#descripcion").text(descriptor[azar-1]);
 
             // para ver la grilla
