@@ -126,9 +126,8 @@ figure figcaption.blockquote-footer:before {
 
 figure figcaption.blockquote-footer abbr {
     font-family: "PT Serif", serif;
-    font-weight: 700;
-    letter-spacing: 0.075rem;
-    margin-left: 0.3rem;
+    letter-spacing: 0.05rem;
+    margin-left: 0.25rem;
     color: #222;
 }
 
@@ -140,7 +139,7 @@ article {
 @media (min-width: 992px) {
     article {
         padding: 1rem 0;
-        min-height: calc(50vh - 3rem);
+        min-height: calc(50vh - 2rem);
     }
 }
 
